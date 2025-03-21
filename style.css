@@ -2,23 +2,32 @@
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #f9fadc;
     padding: 0.3rem;
     padding-top: 60px;
 }
 
 header {
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #d4ceaa;
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: fixed;
-    height: 60px;
     top: 0;
+    left: 0;
+    border-radius: 0.5rem 0.5rem;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 nav {
@@ -27,14 +36,15 @@ nav {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 1.5rem;
+    padding: 1.3rem;
 }
 
 
 #inicio {
     height: 55vh;
     padding: 1rem;
-    padding-top: 4.1rem;
+    padding-top: 5rem;
+    
 }
 
 #inicio span {
@@ -60,13 +70,30 @@ h2 {
 #fotos {
     height: 55vh;
     padding: 1rem;
-    padding-top: 4.1rem;
+    padding-top: 5rem;
+    background-color: #8fa691;
+    border-radius: 0.5rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: solid 1px red;
+}
+
+#fotos img{
+    width: 50%;
 }
 
 #contato {
     height: 55vh;
     padding: 1rem;
-    padding-top: 4.1rem;
+    padding-top: 5rem;
 }
 
 footer {
