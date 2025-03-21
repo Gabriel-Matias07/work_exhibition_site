@@ -1,62 +1,78 @@
-*{
+* {
     margin: 0;
     padding: 0;
-  }
- 
- header{
-   width: 100%;
-   background-color: grey;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
- }
- 
- nav{
-   width: 50%;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: space-around;
-   padding: 1.5rem;
- }
- 
- .container{
-   padding: 0.5rem;
- }
- 
- #inicio{
-   border: solid 1px red;
-   height: 100vh;
-   padding: 1rem;
- }
- 
- #inicio span{
-   width: 100%;
-   max-width: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
- }
- h2{
-   text-align: center;
- }
- #fotos{
-   border: solid 1px blue;
-   height: 100vh;
-   padding: 1rem;
- }
- #contato{
-   border: solid 1px brown;
-   height: 100vh;
-   padding: 1rem;
- }
- 
- footer{
-   background-color: grey;
-   border: solid 1px black;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   justify-content: center;
- }
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffffff;
+    padding: 0.3rem;
+    padding-top: 60px;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    height: 60px;
+    top: 0;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem;
+}
+
+
+#inicio {
+    height: 55vh;
+    padding: 1rem;
+    padding-top: 4.1rem;
+}
+
+#inicio span {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 3rem;
+}
+
+#inicio span img{
+    width: 50%;
+    border-radius: 50px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#fotos {
+    height: 55vh;
+    padding: 1rem;
+    padding-top: 4.1rem;
+}
+
+#contato {
+    height: 55vh;
+    padding: 1rem;
+    padding-top: 4.1rem;
+}
+
+footer {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
