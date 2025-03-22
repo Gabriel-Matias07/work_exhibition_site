@@ -21,20 +21,47 @@
   <section id="inicio">
     <h2>Inicio</h2>
     <span>
-      <img src="/work_exhibition_site/img/profile/img.png" alt="Imagem de perfil">
-    <p>
-      lorem impstu lorem agraf marg scek imsau ma loa lram loram
-    </p>
+      <p>
+        Meu nome é Cristiano, trabalho com mármore e granito há mais de [X] anos. Estou em Juazeiro do Norte, oferecendo serviços de qualidade no ramo da marmoraria.
+      </p>
+      <img src="img/profile/img.png">
+    
       </span>
   </section>
   <hr>
-  <section id="fotos">
+  <!-- <section id="fotos">
     <h2>Fotos</h2>
     <div class="img-wrapper">
         <img src="/work_exhibition_site/img/works/img.png">
         <img src="/work_exhibition_site/img/works/img.png">
         <img src="/work_exhibition_site/img/works/img.png">
         <img src="/work_exhibition_site/img/works/img.png">
+    </div>
+  </section> -->
+  <section id="fotos">
+    <h2>Fotos</h2>
+    <div class="carousel-container">
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <div class="carousel">
+        <div class="slide">
+          <img src="/work_exhibition_site/img/works/img1.jpg">
+          <p class="caption">Descrição da Obra 1</p>
+        </div>
+        <div class="slide">
+          <img src="/work_exhibition_site/img/works/img2.jpg">
+          <!-- <img src="/work_exhibition_site/img/works/img.png" alt="Obra 2"> -->
+          <p class="caption">Descrição da Obra 2</p>
+        </div>
+        <div class="slide">
+          <img src="/work_exhibition_site/img/works/img3.jpg">
+          <p class="caption">Descrição da Obra 3</p>
+        </div>
+        <div class="slide">
+          <img src="/work_exhibition_site/img/works/img4.jpg">
+          <p class="caption">Descrição da Obra 4</p>
+        </div>
+      </div>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
     </div>
   </section>
   <hr>
@@ -57,4 +84,31 @@
     </nav>
   </footer>
 </body>
+<script>
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelectorAll(".slide");
+    const totalSlides = slides.length;
+    
+    if (index >= totalSlides) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = totalSlides - 1;
+    } else {
+      currentIndex = index;
+    }
+
+    const offset = -currentIndex * 100;
+    document.querySelector(".carousel").style.transform = `translateX(${offset}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+</script>
 </html>
